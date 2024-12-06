@@ -9,17 +9,19 @@
 
 <style>
 body {
-    background-color: #ebe0e0
+    background-color:  #e0ebe9;
 }
 
 #navbar {
-    background-color: #000;
+    background-color: green;
     color: black;
 }
 
 .row1 {
     padding-top: 10px;
-    padding-right: 50px
+    padding-right: 50px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .row2 {
@@ -27,38 +29,46 @@ body {
 }
 
 .navbar-input {
-    padding: 11px 16px;
-    border-radius: 2px 0 0 2px;
-    border: 0 none;
-    outline: 0 none;
-    font-size: 15px
+     padding: 11px 16px;
+      border-bottom-left-radius: 10px;
+      border: 0 none;
+      outline: 0 none;
+      font-size: 15px;
+      color: green;
+      font-style: italic;
+}
+.navbar-input::placeholder{
+    color: green;
+    font-style: italic;
+    
 }
 
 .navbar-button {
-    background-color: #ffe11b;
-    border: 1px solid #ffe11b;
-    border-radius: 0 2px 2px 0;
-    color: #565656;
-    padding: 10px 0;
-    height: 43px;
-    cursor: pointer
+       background-color: grey;
+      border: 1px solid grey;
+      border-top-right-radius: 10px;
+      color: #565656;
+      padding: 10px 0;
+      height: 43px;
+      cursor: pointer;
 }
 
 .cart-button {
-    background-color: #808080;
+   background-color: #808080;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
     padding: 10px 0;
     text-align: center;
     height: 41px;
-    border-radius: 2px;
-    font-weight: 500;
+    display: flex;
+    justify-content: center;
     width: 120px;
-    display: inline-block;
-    color: #FFFFFF;
+    align-items: center;
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
     border: none;
-    outline: none
+    outline: none;
+    border-radius: 40px;
 }
 
 .cart-button:hover {
@@ -96,21 +106,21 @@ body {
     color: inherit;
     border: none;
     outline: none;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-bottom: 0px
+    margin-bottom: 0;
 }
 
 .dropdown:hover {
-    background-color: #fff
+    background-color: #fff;
 }
 
 .dropdown:hover .links {
-    color: #000
+    color: #000;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -123,12 +133,12 @@ body {
     display: none;
     background-color: #fff;
     color: #333;
-    left: 0px;
+    left: 0;
     border: 0;
     border-radius: 0;
     box-shadow: 0 4px 8px -3px #555454;
     margin: 0;
-    padding: 0px
+    padding: 0;
 }
 
 .links {
@@ -194,24 +204,24 @@ body {
             <ul class="largenav pull-right">
               <li class="upper-links dropdown"><a class="links" href="">Login & SignUp</a>
                   <ul class="dropdown-menu">
-                      <li class="profile-li"><a class="profile-links" href="/customerlogin">Login</a></li>
-                      <li class="profile-li"><a class="profile-links" href="/customersignup">Signup</a></li>
+                      <li class="profile-li"><a class="profile-links" href="/customerlogin" style="color: green;font-weight: bold">Login</a></li>
+                      <li class="profile-li"><a class="profile-links" href="/customersignup" style="color: green;font-weight: bold">Signup</a></li>
                   </ul>
               </li>
 
                 <li class="upper-links"><a class="links" href="/adminclick">Admin</a></li>
                 <li class="upper-links dropdown"><a class="links" href="">More</a>
                     <ul class="dropdown-menu">
-                      <li class="profile-li"><a class="profile-links" href="/send-feedback">Send Feedback</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/contactus">Contact Us</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/aboutus">About Us</a></li>
+                      <li class="profile-li"><a class="profile-links" href="/send-feedback" style="color: green;font-weight: bold;">Send Feedback</a></li>
+                        <li class="profile-li"><a class="profile-links" href="/contactus" style="color: green;font-weight: bold">Contact Us</a></li>
+                        <li class="profile-li"><a class="profile-links" href="/aboutus" style="color: green;font-weight: bold">About Us</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="row row2">
             <div class="col-sm-2">
-                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">Ecommerce </span></a></h2>
+                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav" style="font-weight: bold;color: #fff">AGRICOM </span></a></h2>
             </div>
 
 

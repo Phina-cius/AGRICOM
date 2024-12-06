@@ -329,10 +329,10 @@ body {
                 <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px">
                 <div class="img-info">
                   <div class="info-inner">
-                    <span style="background-color:#08050a; color:yellow;" class="p-company">{{p.name}}</span>
+                    <span style="background-color: green; color:#fff;height: 50px;display: flex;align-items: center;justify-content: center;font-weight: bold" class="p-company">{{p.name}}</span>
 
                   </div>
-                  <div class="a-size">{{p.description}}</div>
+                  <div class="a-size" style="color: green;font-weight: bold;">{{p.description}}</div>
                 </div>
               </div>
 
@@ -342,7 +342,7 @@ body {
                 </div>
 
                 <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                  <span class="price">₹ {{p.price}}</span>
+                  <span class="price">ksh. {{p.price}}</span>
                   <span class="add-to-cart">
                     <span class="txt">Add in cart</span>
                   </span>
@@ -380,11 +380,7 @@ body {
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 
 

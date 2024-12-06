@@ -6,42 +6,53 @@
     <title></title>
 
 
-
+ {% load static %}
 
     <style media="screen">
       body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0)
+    background: linear-gradient(to right, #27b98d, #27b98d);
 }
 
 .box {
-    width: 500px;
+  width: 800px;
     padding: 40px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
+    border-bottom-left-radius: 30px; 
+    border-top-right-radius: 30px; 
     background: #191919;
-    ;
+    display: flex;
     text-align: center;
     transition: 0.25s;
-    margin-top: 100px
+    margin-top: 100px;
+    column-gap: 40px;
+}
+.box .imgcontent{
+    border-radius: 10px;
+}
+.box .imgcontent h2{
+   color: #fff;
+    margin-top: 70px;
+    text-shadow: 2px 3px 10px green;
+    font-weight: bold;
 }
 
 .box input[type="text"],
 .box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
+
+     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border-bottom: 2px solid #fff;
     padding: 10px 10px;
     width: 250px;
     outline: none;
-    color: white;
-    border-radius: 24px;
+    color: green;
+    
     transition: 0.25s
 }
 
@@ -53,31 +64,31 @@
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-    width: 300px;
-    border-color: #2ecc71
+    
+    border-color: #2ecc71;
 }
 
 .box input[type="submit"] {
-    border: 0;
-    background: none;
+    background: green;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    border: 2px solid green;
     padding: 14px 40px;
     outline: none;
     color: white;
-    border-radius: 24px;
+    border-radius: 0;
     transition: 0.25s;
+    width: 100%;
     cursor: pointer
 }
 
 .box input[type="submit"]:hover {
-    background: #2ecc71
+    background: #2ecc71;
 }
 
 .forgot {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 ul.social-network {
@@ -141,7 +152,7 @@ a.socialIcon:hover,
 .social-circle i {
     color: #fff;
     transition: all 0.8s;
-    transition: all 0.8s
+    
 }
     </style>
   </head>
@@ -152,7 +163,14 @@ a.socialIcon:hover,
         <div class="col-md-6">
             <div class="card">
                 <form class="box" method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
+                     <div class="imgcontent" style='background-image: url("{% static 'images/agri-product.jpeg' %}");background-size: cover;background-position: center;background-repeat: no-repeat'>
+                         <h2>Start your journey with agricom</h2>
+                       
+                       
+                    </div>
+                    
+                   <div class="sign-up-infor">
+                              {% csrf_token %}
                     <h1>CUSTOMER SIGNUP</h1>
                     <p class="text-muted"> Please enter your details to create account !</p>
                       {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
@@ -164,6 +182,7 @@ a.socialIcon:hover,
                                   {% render_field customerForm.profile_pic class="form-control" placeholder="Profile pic" %}
                   
                      <input type="submit" name="" value="Create">
+                   </div>
 
                 </form>
             </div>

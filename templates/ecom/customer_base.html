@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+    <!------the remix icons--->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+
+    />
 
 <style>
 body {
@@ -15,13 +22,16 @@ body {
 }
 
 #navbar {
-    background-color: #000;
+    background-color: green;
     color: black;
 }
 
 .row1 {
     padding-top: 10px;
-    padding-right: 50px
+    padding-right: 50px;
+    font-weight: bold;
+    font-style: italic;
+
 }
 
 .row2 {
@@ -30,16 +40,18 @@ body {
 
 .navbar-input {
     padding: 11px 16px;
-    border-radius: 2px 0 0 2px;
+    color: green;
     border: 0 none;
     outline: 0 none;
-    font-size: 15px
+    font-size: 15px;
+    border-bottom-left-radius: 10px;
+    font-style: italic;
 }
 
 .navbar-button {
-    background-color: #ffe11b;
-    border: 1px solid #ffe11b;
-    border-radius: 0 2px 2px 0;
+    background-color: grey;
+    border: 1px solid grey;
+    border-top-right-radius: 10px;
     color: #565656;
     padding: 10px 0;
     height: 43px;
@@ -52,15 +64,16 @@ body {
     padding: 10px 0;
     text-align: center;
     height: 41px;
-    border-radius: 2px;
-    font-weight: 500;
+   
+    
     width: 120px;
     display: inline-block;
-    color: #FFFFFF;
+    font-weight: bold;
     text-decoration: none;
     color: inherit;
     border: none;
-    outline: none
+    outline: none;
+    border-radius: 40px;
 }
 
 .cart-button:hover {
@@ -104,7 +117,8 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-bottom: 0px
+    margin-bottom: 0;
+
 }
 
 .dropdown:hover {
@@ -124,13 +138,13 @@ body {
     top: 100%;
     display: none;
     background-color: #fff;
-    color: #333;
-    left: 0px;
+    color: green;
+    left: 0;
     border: 0;
     border-radius: 0;
     box-shadow: 0 4px 8px -3px #555454;
     margin: 0;
-    padding: 0px
+    padding: 0;
 }
 
 .links {
@@ -173,14 +187,23 @@ body {
 .menu {
     cursor: pointer
 }
+.navbar-input::placeholder{
+    color: green;
+    font-style: italic;
+    
+}
 
         /*---------------------------------------
            Social section
         -----------------------------------------*/
         footer {
-          padding: 0px 0px 0px 0px;
+          padding: 20px 20px;
           background-color: black;
-          margin: 0px;
+          margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
 
@@ -188,43 +211,75 @@ body {
 
           padding: 20px;
         }
-
-        .fa {
-
-          font-size: 23px;
-          width: 60px;
-          text-align: center;
-          text-decoration: none;
-          margin: 5px 2px;
-          border-radius: 50%;
+        footer i{
+            font-size: 40px;
+            background:   #fff;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+            transition: 0.1s linear;
+            border: 10px solid transparent;
         }
-
-        .fa:hover {
-          opacity: 0.5;
-          text-decoration: none;
+        footer i:hover{
+              background: grey;
+            
         }
+        .socialMedia{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
 
-        .fa-facebook {
-          background: #3B5998;
-          color: white;
-          margin-top: 30px;
         }
-
-        .fa-whatsapp {
-          background: #25d366;
-          color: white;
+        .socialMedia h2{
+            font-weight: bold;
+            color: #fff;
+            position: relative;
         }
-
-        .fa-twitter {
-          background: #55ACEE;
-          color: white;
+        .socialMedia h2::before{
+            content: '';
+            bottom: -3px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: #fff;
+            position: absolute;
         }
-
-        .fa-instagram {
-          background: #125688;
-          color: white;
+        .other-infor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+            
         }
-
+        .other-infor h2{
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            
+        }
+        .other-infor h2::before{
+            content: '';
+            bottom: -3px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+            
+        }
+        .infor-list{
+            list-style: none;
+            
+        }
+        
+        
+        
+  
         p {
           text-align: center;
 
@@ -241,38 +296,38 @@ body {
     }
 
     .smallsearch {
-        margin: 0px
+        margin: 0;
     }
 }
 </style>
 </head>
 <body>
-<div id="navbar">
+<div id="navbar" style="background: green">
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right">
 
-                <li class="upper-links"><a class="links" href="/my-order">Orders</a></li>
-                <li class="upper-links"><a class="links" href="/my-profile">Profile</a></li>
-                  <li class="upper-links"><a class="links" href="/logout">Logout</a></li>
-                <li class="upper-links dropdown"><a class="links" href="">More</a>
+                <li class="upper-links"><a class="links" href="/my-order"  style="font-style: italic; font-weight: bold;">Orders</a></li>
+                <li class="upper-links"><a class="links" href="/my-profile" style="font-style: italic;font-weight: bold">Profile</a></li>
+                  <li class="upper-links"><a class="links" href="/logout" style="font-style: italic;font-weight: bold">Logout</a></li>
+                <li class="upper-links dropdown"><a class="links" href="" style="font-style: italic;font-weight: bold">More</a>
                     <ul class="dropdown-menu">
-                      <li class="profile-li"><a class="profile-links" href="/send-feedback">Send Feedback</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/contactus">Contact Us</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/aboutus">About Us</a></li>
+                      <li class="profile-li"><a class="profile-links" href="/send-feedback" style="color: green;font-weight: bold;font-style: italic">Send Feedback</a></li>
+                        <li class="profile-li"><a class="profile-links" href="/contactus" style="color: green;font-weight: bold;font-style: italic">Contact Us</a></li>
+                        <li class="profile-li"><a class="profile-links" href="/aboutus" style="color: green;font-weight: bold;font-style: italic">About Us</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="row row2">
             <div class="col-sm-2">
-                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">Ecommerce </span></a></h2>
+                <h2 style="margin:0;"><a style="text-decoration:none; color:white;font-weight: bold" href="/"><span class="largenav" >AGRICOM </span></a></h2>
             </div>
 
             <div class="navbar-search smallsearch col-sm-8 col-xs-11">
               <form  action="/search" method="get">
-                <div class="row"> <input class="navbar-input col-xs-11" type="search" placeholder="Search for Products, Brands and more" name="query" id="query">
-                  <button class="navbar-button col-xs-1" type="submit">
+                <div class="row"> <input class="navbar-input col-xs-11" type="search" placeholder="Search for agricultural Products, Brands and more" name="query" id="query" style="color: green;font-style: italic;border-bottom-left-radius: 10px">
+                  <button class="navbar-button col-xs-1" type="submit" style="background: grey;border: 2px solid grey;border-top-right-radius: 10px">
                     <svg width="15px" height="15px">
                             <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
                     </svg>
@@ -295,24 +350,29 @@ body {
 <!-- content end-->
 <br><br><br>
 <footer>
-  <p>
-    <a id="ftr" href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
-    <a id="ftr" href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
-    <a id="ftr" href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
-    <a id="ftr" href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
-  </p>
+   
+    <div class="socialMedia">
+         <h2>social media links</h2>
+        <p>
+      
+            <a id="ftr" href="https://www.facebook.com/" ><i class="ri-facebook-line"></i></a>
+            <a id="ftr" href="https://api.whatsapp.com/send?phone=0798681812&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" ><i class="ri-whatsapp-line"></i></a>
+            <a id="ftr" href="https://instagram.com" ><i class="ri-instagram-line"></i></a>
+            <a id="ftr" href="https://twitter.com" ><i class="ri-twitter-x-line"></i></a>
+       </p>
+    </div>
+    
+    <div class="other-infor">
+        <h2>other infor</h2>
+          <ul class="infor-list">
+                      <li class="profile-li"><a  href="/send-feedback" style="color: #fff;font-weight: bold;font-style: italic">Send Feedback</a></li>
+                        <li class="profile-li"><a  href="/contactus" style="color: #fff;font-weight: bold;font-style: italic">Contact Us</a></li>
+                        <li class="profile-li"><a  href="/aboutus" style="color: #fff;font-weight: bold;font-style: italic">About Us</a></li>
+          </ul>
+        
+    </div>
 
   <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-          <p>Made in India <br>
-            Copyright &copy; 2020 LazyCoder </p>
-        </div>
-      </div>
-    </div>
-  </div>
 </footer>
 <script>
 $(document).ready(function(){

@@ -5,87 +5,127 @@
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!------the remix icons--->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
 
+    />
 
   <style>
     /*---------------------------------------
    Social section
 -----------------------------------------*/
-    footer {
-      padding: 0px 0px 0px 0px;
-      background-color: black;
-      margin: 0px;
-  
-    }
+     footer {
+          padding: 20px 20px;
+          background-color: black;
+          margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-    .fa {
-      padding: 20px;
-      font-size: 23px;
-      width: 60px;
-      text-align: center;
-      text-decoration: none;
-      margin: 5px 2px;
-      border-radius: 50%;
-    }
 
-    .fa:hover {
-      opacity: 0.5;
-      text-decoration: none;
-    }
+        #ftr {
 
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-      margin-top: 30px;
-    }
+          padding: 20px;
+        }
+        footer i{
+            font-size: 40px;
+            background:   #fff;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+            transition: 0.1s linear;
+            border: 10px solid transparent;
+        }
+        footer i:hover{
+              background: grey;
+            
+        }
+        .socialMedia{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
 
-    .fa-whatsapp {
-      background: #25d366;
-      color: white;
-    }
-
-    .fa-twitter {
-      background: #55ACEE;
-      color: white;
-    }
-
-    .fa-instagram {
-      background: #125688;
-      color: white;
-    }
-
-    p {
-      text-align: center;
-
-    }
+        }
+        .socialMedia h2{
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+        }
+        .socialMedia h2::before{
+            content: '';
+            bottom: -3px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+        }
+        .other-infor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+            
+        }
+        .other-infor h2{
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            
+        }
+        .other-infor h2::before{
+            content: '';
+            bottom: -3px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+            
+        }
+        .infor-list{
+            list-style: none;
+            
+        }
+        
+   
   </style>
 </head>
 
 <footer>
-
-  <p>
-    <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
-    <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
-    <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
-    <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
-  </p>
+   
+    <div class="socialMedia">
+         <h2>social media links</h2>
+        <p>
+      
+            <a id="ftr" href="https://www.facebook.com/" ><i class="ri-facebook-line"></i></a>
+            <a id="ftr" href="https://api.whatsapp.com/send?phone=0798681812&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" ><i class="ri-whatsapp-line"></i></a>
+            <a id="ftr" href="https://instagram.com" ><i class="ri-instagram-line"></i></a>
+            <a id="ftr" href="https://twitter.com" ><i class="ri-twitter-x-line"></i></a>
+       </p>
+    </div>
+    
+    <div class="other-infor">
+        <h2>other infor</h2>
+          <ul class="infor-list">
+                      <li class="profile-li"><a  href="/send-feedback" style="color: #fff;font-weight: bold;font-style: italic">Send Feedback</a></li>
+                        <li class="profile-li"><a  href="/contactus" style="color: #fff;font-weight: bold;font-style: italic">Contact Us</a></li>
+                        <li class="profile-li"><a  href="/aboutus" style="color: #fff;font-weight: bold;font-style: italic">About Us</a></li>
+          </ul>
+        
+    </div>
 
   <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-          <p>Made in India <br>
-            Copyright &copy; 2020 LazyCoder </p>
-        </div>
-      </div>
-    </div>
-  </div>
 </footer>
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
+
 
 </html>
